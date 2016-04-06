@@ -1,0 +1,130 @@
+\hypertarget{lspci_8c}{}\section{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/lspci.c File Reference}
+\label{lspci_8c}\index{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/lspci.\+c@{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/lspci.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lspci.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lspci_8c_a947ea696f0459dad21a5dd848d6bc057}{config\+\_\+fetch} (struct \hyperlink{structdevice}{device} $\ast$d, unsigned int pos, unsigned int len)
+\item 
+struct \hyperlink{structdevice}{device} $\ast$ \hyperlink{lspci_8c_a8727cf8ed5d3b61c749da8377f735b3f}{scan\+\_\+device} (struct pci\+\_\+dev $\ast$p)
+\item 
+byte \hyperlink{lspci_8c_a34255febae8b5d3c33150d264b6ddcf1}{get\+\_\+conf\+\_\+byte} (struct \hyperlink{structdevice}{device} $\ast$d, unsigned int pos)
+\item 
+word \hyperlink{lspci_8c_a89f5c1d0f80ad937c6f447f3f3682521}{get\+\_\+conf\+\_\+word} (struct \hyperlink{structdevice}{device} $\ast$d, unsigned int pos)
+\item 
+u32 \hyperlink{lspci_8c_acc4ec55afe77cbc74838fcef901ef81e}{get\+\_\+conf\+\_\+long} (struct \hyperlink{structdevice}{device} $\ast$d, unsigned int pos)
+\item 
+void \hyperlink{lspci_8c_a6d3bb27c5710a45abbb7cccf03e8b0df}{get\+\_\+subid} (struct \hyperlink{structdevice}{device} $\ast$d, word $\ast$subvp, word $\ast$subdp)
+\item 
+void \hyperlink{lspci_8c_a9d78c60f9bb63531bb767bffa89ce41d}{show\+\_\+device} (struct \hyperlink{structdevice}{device} $\ast$d)
+\item 
+int \hyperlink{lspci_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lspci_8c_a0b2caeb4b6f130be43e5a2f0267dd453}{verbose}
+\item 
+struct pci\+\_\+filter \hyperlink{lspci_8c_abd2b2a28e0b9208f22c62de6f5fa18bb}{filter}
+\item 
+char $\ast$ \hyperlink{lspci_8c_af272af003f157ae44b9ee939531c50e3}{opt\+\_\+pcimap}
+\item 
+const char \hyperlink{lspci_8c_a01a73e823e0892841a4fd2f900b85688}{program\+\_\+name} \mbox{[}$\,$\mbox{]} = \char`\"{}lspci\char`\"{}
+\item 
+struct pci\+\_\+access $\ast$ \hyperlink{lspci_8c_ab4955450ebe819bb8e37cec5a17b2886}{pacc}
+\item 
+struct \hyperlink{structdevice}{device} $\ast$ \hyperlink{lspci_8c_a3c7b44cedeb27f18fc6a2966c630a5fe}{first\+\_\+dev}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{lspci.\+c@{lspci.\+c}!config\+\_\+fetch@{config\+\_\+fetch}}
+\index{config\+\_\+fetch@{config\+\_\+fetch}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{config\+\_\+fetch(struct device $\ast$d, unsigned int pos, unsigned int len)}{config_fetch(struct device *d, unsigned int pos, unsigned int len)}}]{\setlength{\rightskip}{0pt plus 5cm}int config\+\_\+fetch (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d, }
+\item[{unsigned int}]{pos, }
+\item[{unsigned int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a947ea696f0459dad21a5dd848d6bc057}{}\label{lspci_8c_a947ea696f0459dad21a5dd848d6bc057}
+\index{lspci.\+c@{lspci.\+c}!get\+\_\+conf\+\_\+byte@{get\+\_\+conf\+\_\+byte}}
+\index{get\+\_\+conf\+\_\+byte@{get\+\_\+conf\+\_\+byte}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+conf\+\_\+byte(struct device $\ast$d, unsigned int pos)}{get_conf_byte(struct device *d, unsigned int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}byte get\+\_\+conf\+\_\+byte (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d, }
+\item[{unsigned int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a34255febae8b5d3c33150d264b6ddcf1}{}\label{lspci_8c_a34255febae8b5d3c33150d264b6ddcf1}
+\index{lspci.\+c@{lspci.\+c}!get\+\_\+conf\+\_\+long@{get\+\_\+conf\+\_\+long}}
+\index{get\+\_\+conf\+\_\+long@{get\+\_\+conf\+\_\+long}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+conf\+\_\+long(struct device $\ast$d, unsigned int pos)}{get_conf_long(struct device *d, unsigned int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}u32 get\+\_\+conf\+\_\+long (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d, }
+\item[{unsigned int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_acc4ec55afe77cbc74838fcef901ef81e}{}\label{lspci_8c_acc4ec55afe77cbc74838fcef901ef81e}
+\index{lspci.\+c@{lspci.\+c}!get\+\_\+conf\+\_\+word@{get\+\_\+conf\+\_\+word}}
+\index{get\+\_\+conf\+\_\+word@{get\+\_\+conf\+\_\+word}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+conf\+\_\+word(struct device $\ast$d, unsigned int pos)}{get_conf_word(struct device *d, unsigned int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}word get\+\_\+conf\+\_\+word (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d, }
+\item[{unsigned int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a89f5c1d0f80ad937c6f447f3f3682521}{}\label{lspci_8c_a89f5c1d0f80ad937c6f447f3f3682521}
+\index{lspci.\+c@{lspci.\+c}!get\+\_\+subid@{get\+\_\+subid}}
+\index{get\+\_\+subid@{get\+\_\+subid}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+subid(struct device $\ast$d, word $\ast$subvp, word $\ast$subdp)}{get_subid(struct device *d, word *subvp, word *subdp)}}]{\setlength{\rightskip}{0pt plus 5cm}void get\+\_\+subid (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d, }
+\item[{word $\ast$}]{subvp, }
+\item[{word $\ast$}]{subdp}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a6d3bb27c5710a45abbb7cccf03e8b0df}{}\label{lspci_8c_a6d3bb27c5710a45abbb7cccf03e8b0df}
+\index{lspci.\+c@{lspci.\+c}!main@{main}}
+\index{main@{main}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{lspci_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{lspci.\+c@{lspci.\+c}!scan\+\_\+device@{scan\+\_\+device}}
+\index{scan\+\_\+device@{scan\+\_\+device}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{scan\+\_\+device(struct pci\+\_\+dev $\ast$p)}{scan_device(struct pci_dev *p)}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf device}$\ast$ scan\+\_\+device (
+\begin{DoxyParamCaption}
+\item[{struct pci\+\_\+dev $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a8727cf8ed5d3b61c749da8377f735b3f}{}\label{lspci_8c_a8727cf8ed5d3b61c749da8377f735b3f}
+\index{lspci.\+c@{lspci.\+c}!show\+\_\+device@{show\+\_\+device}}
+\index{show\+\_\+device@{show\+\_\+device}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+device(struct device $\ast$d)}{show_device(struct device *d)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+\_\+device (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{lspci_8c_a9d78c60f9bb63531bb767bffa89ce41d}{}\label{lspci_8c_a9d78c60f9bb63531bb767bffa89ce41d}
+
+
+\subsection{Variable Documentation}
+\index{lspci.\+c@{lspci.\+c}!filter@{filter}}
+\index{filter@{filter}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{filter}{filter}}]{\setlength{\rightskip}{0pt plus 5cm}struct pci\+\_\+filter filter}\hypertarget{lspci_8c_abd2b2a28e0b9208f22c62de6f5fa18bb}{}\label{lspci_8c_abd2b2a28e0b9208f22c62de6f5fa18bb}
+\index{lspci.\+c@{lspci.\+c}!first\+\_\+dev@{first\+\_\+dev}}
+\index{first\+\_\+dev@{first\+\_\+dev}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{first\+\_\+dev}{first_dev}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf device}$\ast$ first\+\_\+dev}\hypertarget{lspci_8c_a3c7b44cedeb27f18fc6a2966c630a5fe}{}\label{lspci_8c_a3c7b44cedeb27f18fc6a2966c630a5fe}
+\index{lspci.\+c@{lspci.\+c}!opt\+\_\+pcimap@{opt\+\_\+pcimap}}
+\index{opt\+\_\+pcimap@{opt\+\_\+pcimap}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{opt\+\_\+pcimap}{opt_pcimap}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ opt\+\_\+pcimap}\hypertarget{lspci_8c_af272af003f157ae44b9ee939531c50e3}{}\label{lspci_8c_af272af003f157ae44b9ee939531c50e3}
+\index{lspci.\+c@{lspci.\+c}!pacc@{pacc}}
+\index{pacc@{pacc}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{pacc}{pacc}}]{\setlength{\rightskip}{0pt plus 5cm}struct pci\+\_\+access$\ast$ pacc}\hypertarget{lspci_8c_ab4955450ebe819bb8e37cec5a17b2886}{}\label{lspci_8c_ab4955450ebe819bb8e37cec5a17b2886}
+\index{lspci.\+c@{lspci.\+c}!program\+\_\+name@{program\+\_\+name}}
+\index{program\+\_\+name@{program\+\_\+name}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{program\+\_\+name}{program_name}}]{\setlength{\rightskip}{0pt plus 5cm}const char program\+\_\+name\mbox{[}$\,$\mbox{]} = \char`\"{}lspci\char`\"{}}\hypertarget{lspci_8c_a01a73e823e0892841a4fd2f900b85688}{}\label{lspci_8c_a01a73e823e0892841a4fd2f900b85688}
+\index{lspci.\+c@{lspci.\+c}!verbose@{verbose}}
+\index{verbose@{verbose}!lspci.\+c@{lspci.\+c}}
+\subsubsection[{\texorpdfstring{verbose}{verbose}}]{\setlength{\rightskip}{0pt plus 5cm}int verbose}\hypertarget{lspci_8c_a0b2caeb4b6f130be43e5a2f0267dd453}{}\label{lspci_8c_a0b2caeb4b6f130be43e5a2f0267dd453}

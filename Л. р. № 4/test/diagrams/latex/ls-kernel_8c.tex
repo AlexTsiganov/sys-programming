@@ -1,0 +1,57 @@
+\hypertarget{ls-kernel_8c}{}\section{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/kernel.c File Reference}
+\label{ls-kernel_8c}\index{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/kernel.\+c@{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/kernel.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lspci.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sys/utsname.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpcimap__entry}{pcimap\+\_\+entry}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ls-kernel_8c_af9e439a2473063fe6a8ccbf3271fbcf4}{M\+A\+T\+CH}(x,  y)~((y) $>$ 0xffff $\vert$$\vert$ (x) == (y))
+\item 
+\#define \hyperlink{ls-kernel_8c_a04dd2d5f2c00bffc289b0c8e2dbdbe56}{D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~1024
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ls-kernel_8c_a6d99437958bce75f4843547f8a2d97f1}{show\+\_\+kernel} (struct \hyperlink{structdevice}{device} $\ast$d)
+\item 
+void \hyperlink{ls-kernel_8c_a715d3b5c9a053e644d1ec34b55b13333}{show\+\_\+kernel\+\_\+machine} (struct \hyperlink{structdevice}{device} $\ast$d)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{ls-\/kernel.\+c@{ls-\/kernel.\+c}!D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!ls-\/kernel.\+c@{ls-\/kernel.\+c}}
+\subsubsection[{\texorpdfstring{D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{DRIVER_BUF_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+R\+I\+V\+E\+R\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~1024}\hypertarget{ls-kernel_8c_a04dd2d5f2c00bffc289b0c8e2dbdbe56}{}\label{ls-kernel_8c_a04dd2d5f2c00bffc289b0c8e2dbdbe56}
+\index{ls-\/kernel.\+c@{ls-\/kernel.\+c}!M\+A\+T\+CH@{M\+A\+T\+CH}}
+\index{M\+A\+T\+CH@{M\+A\+T\+CH}!ls-\/kernel.\+c@{ls-\/kernel.\+c}}
+\subsubsection[{\texorpdfstring{M\+A\+T\+CH}{MATCH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+CH(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)~((y) $>$ 0xffff $\vert$$\vert$ (x) == (y))}\hypertarget{ls-kernel_8c_af9e439a2473063fe6a8ccbf3271fbcf4}{}\label{ls-kernel_8c_af9e439a2473063fe6a8ccbf3271fbcf4}
+
+
+\subsection{Function Documentation}
+\index{ls-\/kernel.\+c@{ls-\/kernel.\+c}!show\+\_\+kernel@{show\+\_\+kernel}}
+\index{show\+\_\+kernel@{show\+\_\+kernel}!ls-\/kernel.\+c@{ls-\/kernel.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+kernel(struct device $\ast$d)}{show_kernel(struct device *d)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+\_\+kernel (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{ls-kernel_8c_a6d99437958bce75f4843547f8a2d97f1}{}\label{ls-kernel_8c_a6d99437958bce75f4843547f8a2d97f1}
+\index{ls-\/kernel.\+c@{ls-\/kernel.\+c}!show\+\_\+kernel\+\_\+machine@{show\+\_\+kernel\+\_\+machine}}
+\index{show\+\_\+kernel\+\_\+machine@{show\+\_\+kernel\+\_\+machine}!ls-\/kernel.\+c@{ls-\/kernel.\+c}}
+\subsubsection[{\texorpdfstring{show\+\_\+kernel\+\_\+machine(struct device $\ast$d)}{show_kernel_machine(struct device *d)}}]{\setlength{\rightskip}{0pt plus 5cm}void show\+\_\+kernel\+\_\+machine (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{ls-kernel_8c_a715d3b5c9a053e644d1ec34b55b13333}{}\label{ls-kernel_8c_a715d3b5c9a053e644d1ec34b55b13333}

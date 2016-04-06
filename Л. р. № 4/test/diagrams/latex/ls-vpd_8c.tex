@@ -1,0 +1,52 @@
+\hypertarget{ls-vpd_8c}{}\section{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/vpd.c File Reference}
+\label{ls-vpd_8c}\index{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/vpd.\+c@{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/ls-\/vpd.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}lspci.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries vpd\+\_\+item}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0}{vpd\+\_\+format} \{ \hyperlink{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0af7bedbb8f65a713c35af0ce26c183557}{F\+\_\+\+B\+I\+N\+A\+RY}, 
+\hyperlink{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0addeaf9c02c09455d048c8197c3fa9a83}{F\+\_\+\+T\+E\+XT}, 
+\hyperlink{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0a1fab147ed6ce4a1d2d1a9b1c005ad81d}{F\+\_\+\+R\+E\+S\+VD}, 
+\hyperlink{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0abdcd4804e0b90394f2f5bad2a1fff650}{F\+\_\+\+R\+D\+WR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ls-vpd_8c_a0667de07cd253b2f7c4771d170c43ddc}{cap\+\_\+vpd} (struct \hyperlink{structdevice}{device} $\ast$d)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!vpd\+\_\+format@{vpd\+\_\+format}}
+\index{vpd\+\_\+format@{vpd\+\_\+format}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}
+\subsubsection[{\texorpdfstring{vpd\+\_\+format}{vpd_format}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vpd\+\_\+format}}\hypertarget{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0}{}\label{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+\_\+\+B\+I\+N\+A\+RY@{F\+\_\+\+B\+I\+N\+A\+RY}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!F\+\_\+\+B\+I\+N\+A\+RY@{F\+\_\+\+B\+I\+N\+A\+RY}}\item[{\em 
+F\+\_\+\+B\+I\+N\+A\+RY\hypertarget{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0af7bedbb8f65a713c35af0ce26c183557}{}\label{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0af7bedbb8f65a713c35af0ce26c183557}
+}]\index{F\+\_\+\+T\+E\+XT@{F\+\_\+\+T\+E\+XT}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!F\+\_\+\+T\+E\+XT@{F\+\_\+\+T\+E\+XT}}\item[{\em 
+F\+\_\+\+T\+E\+XT\hypertarget{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0addeaf9c02c09455d048c8197c3fa9a83}{}\label{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0addeaf9c02c09455d048c8197c3fa9a83}
+}]\index{F\+\_\+\+R\+E\+S\+VD@{F\+\_\+\+R\+E\+S\+VD}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!F\+\_\+\+R\+E\+S\+VD@{F\+\_\+\+R\+E\+S\+VD}}\item[{\em 
+F\+\_\+\+R\+E\+S\+VD\hypertarget{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0a1fab147ed6ce4a1d2d1a9b1c005ad81d}{}\label{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0a1fab147ed6ce4a1d2d1a9b1c005ad81d}
+}]\index{F\+\_\+\+R\+D\+WR@{F\+\_\+\+R\+D\+WR}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!F\+\_\+\+R\+D\+WR@{F\+\_\+\+R\+D\+WR}}\item[{\em 
+F\+\_\+\+R\+D\+WR\hypertarget{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0abdcd4804e0b90394f2f5bad2a1fff650}{}\label{ls-vpd_8c_a3677f90b4ba602604ae100f7cd432ce0abdcd4804e0b90394f2f5bad2a1fff650}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{ls-\/vpd.\+c@{ls-\/vpd.\+c}!cap\+\_\+vpd@{cap\+\_\+vpd}}
+\index{cap\+\_\+vpd@{cap\+\_\+vpd}!ls-\/vpd.\+c@{ls-\/vpd.\+c}}
+\subsubsection[{\texorpdfstring{cap\+\_\+vpd(struct device $\ast$d)}{cap_vpd(struct device *d)}}]{\setlength{\rightskip}{0pt plus 5cm}void cap\+\_\+vpd (
+\begin{DoxyParamCaption}
+\item[{struct {\bf device} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{ls-vpd_8c_a0667de07cd253b2f7c4771d170c43ddc}{}\label{ls-vpd_8c_a0667de07cd253b2f7c4771d170c43ddc}

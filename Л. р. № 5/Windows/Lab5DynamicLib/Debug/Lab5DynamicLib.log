@@ -1,0 +1,7 @@
+﻿  MyInfoHelperD.cpp
+c:\users\alexandr\documents\visual studio 2015\projects\системное программирование\lab5dynamiclib\myinfohelperd.cpp(16): warning C4273: MyInfoHelperD::MyInfoHelperD::fileSize: несовместимая компоновка dll
+  c:\users\alexandr\documents\visual studio 2015\projects\системное программирование\lab5dynamiclib\myinfohelperd.h(14): note: см. предыдущее определение "fileSize"
+c:\users\alexandr\documents\visual studio 2015\projects\системное программирование\lab5dynamiclib\myinfohelperd.cpp(32): warning C4273: MyInfoHelperD::MyInfoHelperD::totalHDInfo: несовместимая компоновка dll
+  c:\users\alexandr\documents\visual studio 2015\projects\системное программирование\lab5dynamiclib\myinfohelperd.h(15): note: см. предыдущее определение "totalHDInfo"
+     Создается библиотека C:\Users\Alexandr\Documents\Visual Studio 2015\Projects\Системное программирование\Lab5\Debug\Lab5DynamicLib.lib и объект C:\Users\Alexandr\Documents\Visual Studio 2015\Projects\Системное программирование\Lab5\Debug\Lab5DynamicLib.exp
+  Lab5DynamicLib.vcxproj -> C:\Users\Alexandr\Documents\Visual Studio 2015\Projects\Системное программирование\Lab5\Debug\Lab5DynamicLib.dll

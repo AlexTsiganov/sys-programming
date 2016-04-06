@@ -1,0 +1,118 @@
+\hypertarget{pciutils_8h}{}\section{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/pciutils.h File Reference}
+\label{pciutils_8h}\index{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/pciutils.\+h@{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/pciutils.\+h}}
+{\ttfamily \#include \char`\"{}lib/pci.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lib/sysdep.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pciutils_8h_ae227f2ee9f8571bebad4860128159818}{P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON}~P\+C\+I\+L\+I\+B\+\_\+\+V\+E\+R\+S\+I\+ON
+\item 
+\#define \hyperlink{pciutils_8h_a4c210f767dcd35aac7f078bea96b56aa}{G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL}~\char`\"{}H\+:\char`\"{}
+\item 
+\#define \hyperlink{pciutils_8h_a7a748968f2a6dea32f01737c2081eae1}{G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL}~\char`\"{}-\/H $<$mode$>$\textbackslash{}t\+Use direct hardware access ($<$mode$>$ = 1 or 2)\textbackslash{}n\char`\"{}
+\item 
+\#define \hyperlink{pciutils_8h_a01e5d6f2c0a44e144b436889aa702849}{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}~\char`\"{}F\+:\char`\"{}
+\item 
+\#define \hyperlink{pciutils_8h_a76437f633203ee077fbba74fbf563336}{G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP}~\char`\"{}-\/F $<$file$>$\textbackslash{}t\+Read P\+CI configuration dump from a given file\textbackslash{}n\char`\"{}
+\item 
+\#define \hyperlink{pciutils_8h_adaab0797a1015759ca4dbe5dfb055399}{G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS}~\char`\"{}A\+:\+G\+O\+:\char`\"{} G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL \hyperlink{pciutils_8h_a01e5d6f2c0a44e144b436889aa702849}{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}
+\item 
+\#define \hyperlink{pciutils_8h_a3a074a07c738b47dbdaaa4ea74008031}{G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pciutils_8h_abbe4ca186d971d02c5102f0b9b565245}{die} (char $\ast$msg,...) N\+O\+N\+R\+ET P\+C\+I\+\_\+\+P\+R\+I\+N\+TF(1
+\item 
+void void $\ast$ \hyperlink{pciutils_8h_a0e0a85fac5f1149137bdf9d16ffacef6}{xmalloc} (unsigned int howmuch)
+\item 
+void $\ast$ \hyperlink{pciutils_8h_a5fb23803ae4b63ef3fc83e08730561a8}{xrealloc} (void $\ast$ptr, unsigned int howmuch)
+\item 
+char $\ast$ \hyperlink{pciutils_8h_aaa6dc00bd3d6c7d11caaf64196e38089}{xstrdup} (char $\ast$str)
+\item 
+int \hyperlink{pciutils_8h_a3387bf27b2f1c7476ccfc49f82f84d8a}{parse\+\_\+generic\+\_\+option} (int i, struct pci\+\_\+access $\ast$\hyperlink{lspci_8h_ab4955450ebe819bb8e37cec5a17b2886}{pacc}, char $\ast$optarg)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \hyperlink{pciutils_8h_a01a73e823e0892841a4fd2f900b85688}{program\+\_\+name} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP@{G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP}}
+\index{G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP@{G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP}{GENERIC_HELP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+E\+R\+I\+C\+\_\+\+H\+E\+LP}\hypertarget{pciutils_8h_a3a074a07c738b47dbdaaa4ea74008031}{}\label{pciutils_8h_a3a074a07c738b47dbdaaa4ea74008031}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"-A <method>\(\backslash\)tUse the specified PCI access method (see `-A help' for a list)\(\backslash\)n"} \(\backslash\)
+    \textcolor{stringliteral}{"-O <par>=<val>\(\backslash\)tSet PCI access parameter (see `-O help' for a list)\(\backslash\)n"} \(\backslash\)
+    \textcolor{stringliteral}{"-G\(\backslash\)t\(\backslash\)tEnable PCI access debugging\(\backslash\)n"} \hyperlink{pciutils_8h_a7a748968f2a6dea32f01737c2081eae1}{\(\backslash\)}
+\hyperlink{pciutils_8h_a7a748968f2a6dea32f01737c2081eae1}{    GENHELP\_INTEL} \hyperlink{pciutils_8h_a76437f633203ee077fbba74fbf563336}{GENHELP\_DUMP}
+\end{DoxyCode}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS@{G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS}}
+\index{G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS@{G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS}{GENERIC_OPTIONS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+E\+R\+I\+C\+\_\+\+O\+P\+T\+I\+O\+NS~\char`\"{}A\+:\+G\+O\+:\char`\"{} G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL {\bf G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}}\hypertarget{pciutils_8h_adaab0797a1015759ca4dbe5dfb055399}{}\label{pciutils_8h_adaab0797a1015759ca4dbe5dfb055399}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP@{G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP}}
+\index{G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP@{G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP}{GENHELP_DUMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+H\+E\+L\+P\+\_\+\+D\+U\+MP~\char`\"{}-\/F $<$file$>$\textbackslash{}t\+Read P\+CI configuration dump from a given file\textbackslash{}n\char`\"{}}\hypertarget{pciutils_8h_a76437f633203ee077fbba74fbf563336}{}\label{pciutils_8h_a76437f633203ee077fbba74fbf563336}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL@{G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL}}
+\index{G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL@{G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL}{GENHELP_INTEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+H\+E\+L\+P\+\_\+\+I\+N\+T\+EL~\char`\"{}-\/H $<$mode$>$\textbackslash{}t\+Use direct hardware access ($<$mode$>$ = 1 or 2)\textbackslash{}n\char`\"{}}\hypertarget{pciutils_8h_a7a748968f2a6dea32f01737c2081eae1}{}\label{pciutils_8h_a7a748968f2a6dea32f01737c2081eae1}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP@{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}}
+\index{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP@{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP}{GENOPT_DUMP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+O\+P\+T\+\_\+\+D\+U\+MP~\char`\"{}F\+:\char`\"{}}\hypertarget{pciutils_8h_a01e5d6f2c0a44e144b436889aa702849}{}\label{pciutils_8h_a01e5d6f2c0a44e144b436889aa702849}
+\index{pciutils.\+h@{pciutils.\+h}!G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL@{G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL}}
+\index{G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL@{G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL}{GENOPT_INTEL}}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+N\+O\+P\+T\+\_\+\+I\+N\+T\+EL~\char`\"{}H\+:\char`\"{}}\hypertarget{pciutils_8h_a4c210f767dcd35aac7f078bea96b56aa}{}\label{pciutils_8h_a4c210f767dcd35aac7f078bea96b56aa}
+\index{pciutils.\+h@{pciutils.\+h}!P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON@{P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON@{P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON}{PCIUTILS_VERSION}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+I\+U\+T\+I\+L\+S\+\_\+\+V\+E\+R\+S\+I\+ON~P\+C\+I\+L\+I\+B\+\_\+\+V\+E\+R\+S\+I\+ON}\hypertarget{pciutils_8h_ae227f2ee9f8571bebad4860128159818}{}\label{pciutils_8h_ae227f2ee9f8571bebad4860128159818}
+
+
+\subsection{Function Documentation}
+\index{pciutils.\+h@{pciutils.\+h}!die@{die}}
+\index{die@{die}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{die(char $\ast$msg,...) N\+O\+N\+R\+E\+T P\+C\+I\+\_\+\+P\+R\+I\+N\+T\+F(1}{die(char *msg,...) NONRET PCI_PRINTF(1}}]{\setlength{\rightskip}{0pt plus 5cm}void die (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{pciutils_8h_abbe4ca186d971d02c5102f0b9b565245}{}\label{pciutils_8h_abbe4ca186d971d02c5102f0b9b565245}
+\index{pciutils.\+h@{pciutils.\+h}!parse\+\_\+generic\+\_\+option@{parse\+\_\+generic\+\_\+option}}
+\index{parse\+\_\+generic\+\_\+option@{parse\+\_\+generic\+\_\+option}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{parse\+\_\+generic\+\_\+option(int i, struct pci\+\_\+access $\ast$pacc, char $\ast$optarg)}{parse_generic_option(int i, struct pci_access *pacc, char *optarg)}}]{\setlength{\rightskip}{0pt plus 5cm}int parse\+\_\+generic\+\_\+option (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{struct pci\+\_\+access $\ast$}]{pacc, }
+\item[{char $\ast$}]{optarg}
+\end{DoxyParamCaption}
+)}\hypertarget{pciutils_8h_a3387bf27b2f1c7476ccfc49f82f84d8a}{}\label{pciutils_8h_a3387bf27b2f1c7476ccfc49f82f84d8a}
+\index{pciutils.\+h@{pciutils.\+h}!xmalloc@{xmalloc}}
+\index{xmalloc@{xmalloc}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{xmalloc(unsigned int howmuch)}{xmalloc(unsigned int howmuch)}}]{\setlength{\rightskip}{0pt plus 5cm}void void$\ast$ xmalloc (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{howmuch}
+\end{DoxyParamCaption}
+)}\hypertarget{pciutils_8h_a0e0a85fac5f1149137bdf9d16ffacef6}{}\label{pciutils_8h_a0e0a85fac5f1149137bdf9d16ffacef6}
+\index{pciutils.\+h@{pciutils.\+h}!xrealloc@{xrealloc}}
+\index{xrealloc@{xrealloc}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{xrealloc(void $\ast$ptr, unsigned int howmuch)}{xrealloc(void *ptr, unsigned int howmuch)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ xrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{unsigned int}]{howmuch}
+\end{DoxyParamCaption}
+)}\hypertarget{pciutils_8h_a5fb23803ae4b63ef3fc83e08730561a8}{}\label{pciutils_8h_a5fb23803ae4b63ef3fc83e08730561a8}
+\index{pciutils.\+h@{pciutils.\+h}!xstrdup@{xstrdup}}
+\index{xstrdup@{xstrdup}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{xstrdup(char $\ast$str)}{xstrdup(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ xstrdup (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{pciutils_8h_aaa6dc00bd3d6c7d11caaf64196e38089}{}\label{pciutils_8h_aaa6dc00bd3d6c7d11caaf64196e38089}
+
+
+\subsection{Variable Documentation}
+\index{pciutils.\+h@{pciutils.\+h}!program\+\_\+name@{program\+\_\+name}}
+\index{program\+\_\+name@{program\+\_\+name}!pciutils.\+h@{pciutils.\+h}}
+\subsubsection[{\texorpdfstring{program\+\_\+name}{program_name}}]{\setlength{\rightskip}{0pt plus 5cm}const char program\+\_\+name\mbox{[}$\,$\mbox{]}}\hypertarget{pciutils_8h_a01a73e823e0892841a4fd2f900b85688}{}\label{pciutils_8h_a01a73e823e0892841a4fd2f900b85688}

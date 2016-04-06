@@ -1,0 +1,63 @@
+\hypertarget{common_8c}{}\section{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/common.c File Reference}
+\label{common_8c}\index{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/common.\+c@{D\+:/\+Main/\+Dropbox/политех/Системное программирование/Л. р. № 4/test/lspci/common.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}pciutils.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void N\+O\+N\+R\+ET \hyperlink{common_8c_a30d1e347f4257a9872174ed7b21624b9}{die} (char $\ast$msg,...)
+\item 
+void $\ast$ \hyperlink{common_8c_af512d3ae097303b5eaa809733fd022d7}{xmalloc} (unsigned int howmuch)
+\item 
+void $\ast$ \hyperlink{common_8c_a5fb23803ae4b63ef3fc83e08730561a8}{xrealloc} (void $\ast$ptr, unsigned int howmuch)
+\item 
+char $\ast$ \hyperlink{common_8c_aaa6dc00bd3d6c7d11caaf64196e38089}{xstrdup} (char $\ast$str)
+\item 
+int \hyperlink{common_8c_a3387bf27b2f1c7476ccfc49f82f84d8a}{parse\+\_\+generic\+\_\+option} (int i, struct pci\+\_\+access $\ast$\hyperlink{lspci_8h_ab4955450ebe819bb8e37cec5a17b2886}{pacc}, char $\ast$optarg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{common.\+c@{common.\+c}!die@{die}}
+\index{die@{die}!common.\+c@{common.\+c}}
+\subsubsection[{\texorpdfstring{die(char $\ast$msg,...)}{die(char *msg,...)}}]{\setlength{\rightskip}{0pt plus 5cm}void N\+O\+N\+R\+ET die (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{msg, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\hypertarget{common_8c_a30d1e347f4257a9872174ed7b21624b9}{}\label{common_8c_a30d1e347f4257a9872174ed7b21624b9}
+\index{common.\+c@{common.\+c}!parse\+\_\+generic\+\_\+option@{parse\+\_\+generic\+\_\+option}}
+\index{parse\+\_\+generic\+\_\+option@{parse\+\_\+generic\+\_\+option}!common.\+c@{common.\+c}}
+\subsubsection[{\texorpdfstring{parse\+\_\+generic\+\_\+option(int i, struct pci\+\_\+access $\ast$pacc, char $\ast$optarg)}{parse_generic_option(int i, struct pci_access *pacc, char *optarg)}}]{\setlength{\rightskip}{0pt plus 5cm}int parse\+\_\+generic\+\_\+option (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{struct pci\+\_\+access $\ast$}]{pacc, }
+\item[{char $\ast$}]{optarg}
+\end{DoxyParamCaption}
+)}\hypertarget{common_8c_a3387bf27b2f1c7476ccfc49f82f84d8a}{}\label{common_8c_a3387bf27b2f1c7476ccfc49f82f84d8a}
+\index{common.\+c@{common.\+c}!xmalloc@{xmalloc}}
+\index{xmalloc@{xmalloc}!common.\+c@{common.\+c}}
+\subsubsection[{\texorpdfstring{xmalloc(unsigned int howmuch)}{xmalloc(unsigned int howmuch)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ xmalloc (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{howmuch}
+\end{DoxyParamCaption}
+)}\hypertarget{common_8c_af512d3ae097303b5eaa809733fd022d7}{}\label{common_8c_af512d3ae097303b5eaa809733fd022d7}
+\index{common.\+c@{common.\+c}!xrealloc@{xrealloc}}
+\index{xrealloc@{xrealloc}!common.\+c@{common.\+c}}
+\subsubsection[{\texorpdfstring{xrealloc(void $\ast$ptr, unsigned int howmuch)}{xrealloc(void *ptr, unsigned int howmuch)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ xrealloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ptr, }
+\item[{unsigned int}]{howmuch}
+\end{DoxyParamCaption}
+)}\hypertarget{common_8c_a5fb23803ae4b63ef3fc83e08730561a8}{}\label{common_8c_a5fb23803ae4b63ef3fc83e08730561a8}
+\index{common.\+c@{common.\+c}!xstrdup@{xstrdup}}
+\index{xstrdup@{xstrdup}!common.\+c@{common.\+c}}
+\subsubsection[{\texorpdfstring{xstrdup(char $\ast$str)}{xstrdup(char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ xstrdup (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{common_8c_aaa6dc00bd3d6c7d11caaf64196e38089}{}\label{common_8c_aaa6dc00bd3d6c7d11caaf64196e38089}
